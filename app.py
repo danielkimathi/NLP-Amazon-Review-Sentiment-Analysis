@@ -6,7 +6,7 @@ from tensorflow.keras.models import load_model
 import pickle
 
 # Load trained LSTM model
-model = load_model("sentiment_lstm_model.keras", compile=False)
+model = tf.keras.models.load_model("sentiment_lstm_model_2_12.keras", compile=False)
 
 # Load tokenizer for preprocessing
 with open("Data/tokenizer.pkl", "rb") as handle:
