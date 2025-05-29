@@ -4,7 +4,7 @@
 ## Project Overview
 This project classifies Amazon product reviews into Positive, Neutral, or Negative sentiment using natural language processing (NLP) and machine learning models. It combines traditional classifiers (Logistic Regression, Naive Bayes) with advanced deep learning models (RNN, LSTM), while addressing common NLP challenges like class imbalance and preprocessing.
 
-The notebook explores the full modeling pipeline, and a deployable Streamlit app enables interactive sentiment predictions from raw text inputs.
+The notebook explores the full modeling pipeline, and includes an interactive script for making sentiment predictions from raw text inputs using a trained model.
 
 ### The notebook includes:
 - **Exploratory Data Analysis (EDA)**: Score distributions, sentiment imbalance, and text length analysis.
@@ -18,22 +18,22 @@ The notebook explores the full modeling pipeline, and a deployable Streamlit app
 ## How to Use This Project
 - **Outputs are fully included** in the Jupyter Notebook.
 - This notebook is not intended to be re-run locally — no external data or setup is required.
-- **Interactive use is provided via the Streamlit app**, which loads a trained LSTM model to make predictions on custom review input.
+- An interactive script (app.py) is available to run predictions locally using the trained LSTM model and custom review input.
 
 ---
 
 ## Files Included in This Repository
 - Amazon-Sentiment-Analysis.ipynb – The full analysis notebook, with all outputs pre-rendered.
-- app.py – Streamlit script for interactive sentiment prediction.
-- sentiment_lstm_model.h5 – Trained LSTM model used in the deployed app.
+- app.py – script for local interactive sentiment prediction.
+- sentiment_lstm_model.h5 – Trained LSTM model used in the interactive script.
 
 ---
 
-## ⚠️ Known Limitation: Streamlit App Stability
+## ⚠️ Known Limitation: Local App Resource Usage
 
-This app runs a deep learning **LSTM model** with **100D GloVe embeddings** and a **20,000-word vocabulary**. While the model performs well and delivers good predictions, repeated usage within lightweight environments (e.g., free Streamlit hosting) can occasionally cause instability after multiple submissions.
+The app.py script runs a deep learning LSTM model with 100D GloVe embeddings and a 20,000-word vocabulary. While the model performs well and delivers good predictions, repeated usage in limited environments (such as small VMs or shared servers) may cause occasional memory or performance issues.
 
-If the app becomes unresponsive, refresh the page to reset the session.
+If the app becomes unresponsive, restart the script or clear memory as needed.
 
 ---
 
@@ -66,8 +66,8 @@ If the app becomes unresponsive, refresh the page to reset the session.
 ---
 
 ## Final Notes
-This project showcases a full sentiment classification pipeline using real-world product reviews. It includes both classical and deep learning approaches, with an interactive app that enables hands-on model usage without requiring any data downloads or setup.
+This project showcases a full sentiment classification pipeline using real-world product reviews. It includes both classical and deep learning approaches, and provides a local interactive interface for exploring model predictions without requiring additional data downloads or cloud deployment.
 
-You can view the full analysis in the notebook, and try the model live through the deployed app.
+You can view the full analysis in the notebook and test the trained model locally using the provided script.
 
 
